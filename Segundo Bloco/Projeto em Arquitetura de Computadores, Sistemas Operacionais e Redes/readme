@@ -1,0 +1,13 @@
+Alterar o programa feito no TP2 de modo a possuir 5 visualizações diferentes:
+Uma para colocar todas as informações associadas ao processador
+Uma para colocar todas as informações associadas à memória
+Uma para colocar todas as informações associadas ao Disco
+Uma para colocar todas as informações associadas ao IP
+Todas as anteriores devem ser alteradas caso o usuário clique nas setas esquerda ou direita do teclado. Seguindo sempre uma ordem predefinida, como em um carrossel.
+Uma última que teria um resumo de todas elas. O qual seria acessado quando o usuário clica na tecla “Barra” do teclado.
+Alterar a barra de CPU do TP2 para ter barras de CPU associadas a cada núcleo (core);
+Adicionar informação de nome/modelo da CPU (brand);
+Adicionar informação do tipo da arquitetura (arch);
+Adicionar informação da palavra do processador (bits);
+Adicionar informação sobre a frequência total e frequência de uso da CPU;
+Adicionar informação do número total de núcleos (núcleo físico) e threads (núcleo lógico).
