@@ -65,7 +65,6 @@ def mostra_uso_cpu():
     text = font.render("Uso de CPU 2:", 1, branco)
     tela.blit(text, (10, 490))
 
-# Mostrar o uso de disco local
 def mostra_uso_disco():
     disco = psutil.disk_usage('.')
     larg = largura_tela #- 2*20
