@@ -13,4 +13,4 @@ print("Percentual de uso de memória:", perc_mem, "%")
 # RSS: Resident set size e VMS: Virtual Memory Size
 mem = '{:.2f}'.format(p.memory_info().rss/1024/1024)
 print("Uso de memória:", mem, "MB")
-print("Número de threads:", p.num_threads())
+print("Número de threads:", p.num_threads ())
