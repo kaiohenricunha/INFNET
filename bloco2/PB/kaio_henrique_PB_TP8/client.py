@@ -1,13 +1,25 @@
 # TP 8
 # Client
 
-import socket
+import socket, sys
 
 HOST = '192.168.0.206'
 PORT = 9090
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-socket.connect((HOST, PORT))
+try:
+    socket.connect((HOST, PORT))
+except Exception as error:
+    print('Error:', error)
+    sys.exit()
 
-socket.send('Hello server!'.encode('utf-8'))
-print(socket.recv(1024).decode('utf-8'))
+print("To exit, type '$")
+msg = input()
+socket.send(msg.encode('utf-8'))
+while msg != '$':
+    msg = socket.recv(1024)
+    print(msg.decode('utf-8'))
+    msg = input()
+    socket.send(msg.encode('utf-8'))
+    
+socket.close()
