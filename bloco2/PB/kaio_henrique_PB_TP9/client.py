@@ -90,7 +90,7 @@ def four():
 
 def five():
     list = []
-    print("\n6- Ports\n")
+    print("\n5- Ports\n")
     port_info = ['PORT INFO']
     i = 0
 
