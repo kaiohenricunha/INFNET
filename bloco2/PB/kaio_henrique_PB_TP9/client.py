@@ -1,4 +1,4 @@
-import cpuinfo, datetime, sched, time, platform, os, nmap, subprocess, socket, pickle,psutil
+import time, os, socket, pickle
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HOST = socket.gethostname() 
@@ -47,8 +47,10 @@ def three():
     d1 = response[1]
     d2 = response[0]
 
-    
-    print(d1, d2)
+    print('get_file()')
+    print(d1)
+    print('get_process()')
+    print(d2)
 
     time.sleep(8)
     os.system('clear') 
@@ -57,21 +59,33 @@ def three():
     return list
 
 def four():
-    print("\n6- Up Hosts\n")
-    list = []
-    nmap_info = ['NMAP INFO']
-    i = 0
+    # print("\n6- Up Hosts\n")
+    # list = []
+    # nmap_info = ['NMAP INFO']
+    # i = 0
 
-    while i <= len(response):
-        nmap_info1 = [response[i][0]]
-        i = i + 1
-        for x,y in zip(nmap_info, nmap_info1):
-            print('{:30}{:<30}'.format(x,y))
-        print("")
+    # while i <= len(response):
+    #     nmap_info1 = [response[i][0]]
+    #     i = i + 1
+    #     for x,y in zip(nmap_info, nmap_info1):
+    #         print('{:30}{:<30}'.format(x,y))
+    #     print("")
+
+    # time.sleep(8)
+    # os.system('clear') 
+    # list.append(nmap_info)
+    # return list
+
+    list = []
+
+    print("\n4 - Up Hosts\n")
+    d2 = response[0]
+
+    print(d2)
 
     time.sleep(8)
     os.system('clear') 
-    list.append(nmap_info)
+    list.append(d2)
     return list
 
 def five():
@@ -88,7 +102,7 @@ def five():
         print("")
 
     time.sleep(8)
-    os.system('cls')
+    os.system('clear')
     list.append(port_info)
     return list
 

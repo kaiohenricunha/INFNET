@@ -1,4 +1,4 @@
-import psutil, cpuinfo, datetime, time, platform, os, nmap, subprocess, socket, pickle, sched
+import psutil, time, os, socket, pickle, sched
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HOST = socket.gethostname() 
