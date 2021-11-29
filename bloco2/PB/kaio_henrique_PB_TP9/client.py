@@ -120,19 +120,6 @@ def six():
     list.append(title_network)
     return list
 
-
-def menu():
-    print('============================')
-    print('OPTIONS')
-    print('============================')
-    print('|1| File Info')
-    print('|2| Processes | PID')
-    print('|3| Scheduled Functions')
-    print('|4| Up Hosts')
-    print('|5| Ports')
-    print('|6| Network')
-    print('============================') 
-
 try: 
     client.connect(HP)
     option = " "
@@ -141,7 +128,6 @@ try:
     
     count = 1
     while count == 1:   
-        menu()
         option = input('Type in your option: ')
         if (option in options):
             client.send(option.encode('utf-8'))
