@@ -8,8 +8,6 @@ buffer = 1024
 
 server.bind(HP)
 print("Server:", HOST, "waiting on the port", PORT, "Just a minute...")
-# (client, addr) = server.accept()
-# print("Client connected:", addr)
 
 def disk_usage():
     disk_usage = psutil.disk_usage('/')
@@ -23,5 +21,3 @@ while True:
     elif option.decode('utf-8') == "1":
         bytes_resp = pickle.dumps(disk_usage())
         server.sendto(bytes_resp, address)
-
-server.close()
