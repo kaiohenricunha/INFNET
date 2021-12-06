@@ -16,7 +16,7 @@ def one():
 try: 
     client.connect(HP)
     option = " "
-    client.send(option.encode('utf-8')) 
+    client.send(option.encode('utf-8'))
     options = ("1", "7")
     
     count = 1

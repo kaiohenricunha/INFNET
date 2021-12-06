@@ -163,6 +163,6 @@ while True:
         bytes_resp = pickle.dumps(network())
         client.send(bytes_resp)
 
-client.close()
-server.close()
-input("Press any key to exit...")
+# client.close()
+# server.close()
+# input("Press any key to exit...")
