@@ -16,6 +16,6 @@ if __name__ == "__main__": # module is being executed by itself
     while True:
         # os.system('clear')
         lista = info_processos_do_sistema()
-        for i in lista:
+        for i in lista: # iterates over all captured running processes and prints their info according to their attributes
             print("\Processo: " + i["name"] + " - PID: " + str(i["pid"]) + "\nUso de CPU: " + str(i["cpu_percent"]) + " %"+ "\nUso de Memória: " + str(i["memory_percent"]) + " %")       
         sleep(10)  
