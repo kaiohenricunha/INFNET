@@ -3,7 +3,7 @@ from time import sleep
 
 def info_processos_do_sistema():
     lista = []
-    for proc in psutil.process_iter():
+    for proc in psutil.process_iter(): # iterates over all running processes
         try:
             pinfo = proc.as_dict(attrs=['pid', 'name','memory_percent','cpu_percent']) # Process class' attribute names
         except psutil.NoSuchProcess:
@@ -12,9 +12,9 @@ def info_processos_do_sistema():
             lista.append(pinfo)    
     return lista
 
-if __name__ == "__main__":
+if __name__ == "__main__": # module is being executed by itself
     while True:
-        os.system('cls||clear')
+        # os.system('clear')
         lista = info_processos_do_sistema()
         for i in lista:
             print("\Processo: " + i["name"] + " - PID: " + str(i["pid"]) + "\nUso de CPU: " + str(i["cpu_percent"]) + " %"+ "\nUso de Memória: " + str(i["memory_percent"]) + " %")       
