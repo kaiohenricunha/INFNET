@@ -1,8 +1,6 @@
 import os, pickle, socket
 
-# Cria o socket
 tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# Obtem o nome da máquina
 host = socket.gethostname()
 porta = 8881
 tcp.bind((host, porta))

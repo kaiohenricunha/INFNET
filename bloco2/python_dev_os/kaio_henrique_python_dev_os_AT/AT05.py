@@ -1,7 +1,9 @@
-# path = os.getcwd()
-# dir = '/bloco2/python_dev_os/kaio_henrique_python_dev_os_AT'
-# path_dir = path + dir
-# os.chdir(path_dir)
+import os
+
+path = os.getcwd()
+dir = '/bloco2/python_dev_os/kaio_henrique_python_dev_os_AT'
+path_dir = path + dir
+os.chdir(path_dir)
 
 list_a, list_b, soma = [], [], []
 try:
@@ -15,7 +17,7 @@ try:
         list_a.append(int(a.strip())) # removes any spaces
     for b in cont_b:
         list_b.append(int(b.strip()))
-    while len(list_a)!=len(list_b):
+    while len(list_a)!=len(list_b): # verifica se as listas tem o mesmo tamanho
         if len(list_a)<len(list_b):
             list_a.append(0) # add 0 to the empty spaces of list_a
         else:
