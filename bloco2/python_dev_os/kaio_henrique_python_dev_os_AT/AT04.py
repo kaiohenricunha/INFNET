@@ -1,19 +1,17 @@
-import os
+import sys
 
-path = os.getcwd()
-dir = '/bloco2/python_dev_os/kaio_henrique_python_dev_os_AT'
-path_dir = path + dir
-os.chdir(path_dir)
-file = open("queremos-saber.txt", "r")
+def revert_file():
+    file = input('Insira o nome do arquivo(path): ')
+    try:
+        with open(file, 'r') as f:
+            for line in reversed(f.readlines()):
+                print(line.rstrip()[::-1])
+    except FileNotFoundError:
+        print('Arquivo não encontrado')
+        sys.exit(1)
 
-for line in file:   
-    print("\nTEXTO")
-    print("----------------")
-    print(line, end="")
-    print()
-    print("\n", "TEXTO REVERSO")
-    print("-----------------")
-    print(line[::-1])  # start at the end of the string and go backwards  
-file.close()
+def main():
+    revert_file()
 
-os.chdir(path)
+if __name__ == "__main__":
+    sys.exit(main())
