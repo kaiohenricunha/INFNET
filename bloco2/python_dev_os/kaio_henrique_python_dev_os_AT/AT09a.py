@@ -1,6 +1,14 @@
+# Testei as 3 opções de execução com um vetor de mesmo tamanho, 10, e obtive os seguintes resultados:
+# multithreading: 0.0025725364685058594 segundos
+# multiprocessing: 4.051970481872559 segundos
+# sequencial: 5.340576171875e-05 segundos
+# A execuçao serial foi mais lentar pois executa os processos em sequencia, 
+# enquanto que a execuçao com threads executa os processos em paralelo.
+# A diferença entre multiprocessing e multithreading é que o multiprocessing tem um espaço de memória separado,
+# enquanto que o multithreading tem espaço de memória compartilhado.
+
 import time
 import random
-
 
 class Sequencial():
 
@@ -30,7 +38,7 @@ class Sequencial():
 
     def print_result(self):
         self.calc_factorial()
-        print('{}Tempo decorrido: {}'.format(' '*2, self.end_time - self.start_time))
+        print('{}Tempo decorrido: {} segundos'.format(' '*2, self.end_time - self.start_time))
 
 
 Sequencial().print_result() # instancia a classe Sequencial e chama o método print_result()

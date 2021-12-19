@@ -1,10 +1,7 @@
-import os
-
-path = os.getcwd()
-dir = '/bloco2/python_dev_os/kaio_henrique_python_dev_os_AT'
-path_dir = path + dir
-os.chdir(path_dir)
-
+# path = os.getcwd()
+# dir = '/bloco2/python_dev_os/kaio_henrique_python_dev_os_AT'
+# path_dir = path + dir
+# os.chdir(path_dir)
 list_a, list_b, soma = [], [], []
 try:
     file_a = open('a.txt', 'r', encoding='utf-8')
@@ -29,5 +26,8 @@ try:
     print("LISTA B: ",*list_b)
     print("----------------------------------------")
     print("SOMA =  ",*soma, "\n")
-except:
-  print("Arquivo não encontrado..")
+except FileNotFoundError:
+    print("\nArquivo não encontrado!\n")
+    print("Verifique se está no path correto...\n")
+except Exception as erro:
+    print("\nErro: ", erro)
